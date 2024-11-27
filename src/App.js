@@ -2,13 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import DataTypeTest from './DataTypeTest';
 import Calc from './Calc/Calc';
+import CSS from './CSS';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {/* <DataTypeTest /> */}
+        <DataTypeTest />
+        <CSS />
         <Calc />
         <p>
           Edit <code>src/App.js</code> and save to reload.

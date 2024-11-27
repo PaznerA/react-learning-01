@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Calc.css"
 
 export default function Calc() {
 
@@ -25,7 +26,7 @@ export default function Calc() {
         )
     }
 
-    return <table>
+    return <table className="calculator">
         <thead>
             <tr><th colSpan="4"><input id="cmdLine" type="text" name="cmdLine" defaultValue="" readOnly={true} value={out} /></th></tr>
         </thead>
