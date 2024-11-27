@@ -15,7 +15,7 @@ export default function StatefulComponent() {
        name: "Aleš"
     })
     const hello = new Hello()
-    // const printHello = () => hello.print() - not necessary since binding
+    // const printHello = () => hello.print() - not necessary since bin
     const [letterList, setLetterList] = useState([
         "a", "b", "c"
     ])
