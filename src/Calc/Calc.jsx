@@ -4,7 +4,6 @@ import "./Calc.css"
 export default function Calc() {
 
     const [out, setOut] = useState('');
-    // const [input, setInput] = useState('');
 
 
     const keyboard = [
@@ -15,28 +14,9 @@ export default function Calc() {
     ];
     
     function calculate (inp) {
-        // setInput(inp)
         setOut(function (oldOut) {
             return "" + oldOut + inp
         })
-        console.log(inp)
-        // console.log("in: " + input)
-        console.log("out:" + out)
-        // if(inp !== NaN){
-        //     setOut(out + "" + input) 
-        // } else if(inp === "+") {
-        //     setOut(out + input)
-        // } else if(inp === "-") {
-        //     setOut(out - input)
-        // } else if(inp === "*") {
-        //     setOut(out * input)
-        // } else if(inp === "/") {
-        //     setOut(out / input)
-        // }
-        // let res = eval(out)
-        // if(res !== undefined && res !== NaN){
-        //     // setOut(res)
-        // }
     }
 
     function showResult() {
