@@ -28,7 +28,7 @@ export default function Calc() {
     let getRow = function (rowData) {
         return rowData.map((text, i) => 
             <td key={i}>
-                {text && <button className={(Number.isInteger(parseInt(text)) && "number") ? "number" : "symbol"} onClick={() => calculate(text)} text={text}>{text}</button>}
+                {text && <button className={(Number.isInteger(parseInt(text))) ? "number" : "symbol"} onClick={() => calculate(text)} text={text}>{text}</button>}
             </td>
         )
     }
