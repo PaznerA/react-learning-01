@@ -11,3 +11,7 @@
 .calculator button.number{
     background-color: lightblue;
 }
+
+.calculator button.symbol{
+    background-color: lightgreen;
+}
