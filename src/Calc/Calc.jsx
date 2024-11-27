@@ -4,7 +4,7 @@ import "./Calc.css"
 export default function Calc() {
 
     const [out, setOut] = useState('');
-    const [input, setInput] = useState('');
+    // const [input, setInput] = useState('');
 
 
     const keyboard = [
@@ -14,30 +14,35 @@ export default function Calc() {
         ["", "0", "", "/"],
     ];
     
-    function calculate () {
-        console.log("in: " + input)
+    function calculate (inp) {
+        // setInput(inp)
+        setOut(function (oldOut) {
+            return "" + oldOut + inp
+        })
+        console.log(inp)
+        // console.log("in: " + input)
         console.log("out:" + out)
-        if(input !== NaN){
-            setOut(out + "" + input) 
-        } else if(input === "+") {
-            setOut(out + input)
-        } else if(input === "-") {
-            setOut(out - input)
-        } else if(input === "*") {
-            setOut(out * input)
-        } else if(input === "/") {
-            setOut(out / input)
-        }
-        let res = eval(out)
-        if(res !== undefined && res !== NaN){
-            setOut(res)
-        }
+        // if(inp !== NaN){
+        //     setOut(out + "" + input) 
+        // } else if(inp === "+") {
+        //     setOut(out + input)
+        // } else if(inp === "-") {
+        //     setOut(out - input)
+        // } else if(inp === "*") {
+        //     setOut(out * input)
+        // } else if(inp === "/") {
+        //     setOut(out / input)
+        // }
+        // let res = eval(out)
+        // if(res !== undefined && res !== NaN){
+        //     // setOut(res)
+        // }
     }
 
     let getRow = function (rowData) {
         return rowData.map((text, i) => 
             <td key={i}>
-                {text && <button className={Number.isInteger(parseInt(text)) && "number"} onClick={() => {console.log(text); setInput(text); calculate() }} text={text}>{text}</button>}
+                {text && <button className={(Number.isInteger(parseInt(text)) && "number") ? "number" : "symbol"} onClick={() => calculate(text)} text={text}>{text}</button>}
             </td>
         )
     }
@@ -46,7 +51,7 @@ export default function Calc() {
     <h2>Calculator WIP demo</h2>
     <table className="calculator">
         <thead>
-            <tr><th colSpan="4"><input id="cmdLine" type="text" name="cmdLine" defaultValue="" readOnly={true} /></th></tr>
+            <tr><th colSpan="4"><input id="cmdLine" type="text" name="cmdLine" value={out} readOnly={true} /></th></tr>
         </thead>
         <tbody>
         {keyboard.map( function(row, i) {
