@@ -9,7 +9,7 @@ export default function Calc() {
     ];
 
     let getRow = function drawRow(rowData) {
-        return rowData.map((text) => <td><CalcBtn text={text}/></td>)
+        return rowData.map((text, i) => <td key={i}><CalcBtn text={text}/></td>)
     }
 
     return <table>
