@@ -1,12 +1,21 @@
 import { useState } from "react"
 
+class Hello {
+    message = "Hello world!"
+    //hard binding this onto this class xD to avoid additional printHello function in component
+    print = () => {
+        console.log(this.message)
+    }
+}
+
 export default function StatefulComponent() {
     const [count, setCount] = useState(0)
     const [user, setUser] = useState({
        id: 1,    
        name: "Aleš"
     })
-
+    const hello = new Hello()
+    // const printHello = () => hello.print() - not necessary since binding
     const [letterList, setLetterList] = useState([
         "a", "b", "c"
     ])
@@ -22,7 +31,7 @@ export default function StatefulComponent() {
     }
 
     const addLetter = (letter) => {
-        console.log(letter)
+        hello.print()
         setLetterList(letterList => ([...letterList, letter]))
     }
     return <>
