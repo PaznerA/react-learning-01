@@ -4,12 +4,14 @@ import DataTypeTest from './DataTypeTest';
 import Calc from './Calc/Calc';
 import CSS from './CSS';
 import UserEvents from './UserEvents';
+import StatefulComponent from './StatefulComponent';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <StatefulComponent />
         <UserEvents />
         <DataTypeTest />
         <CSS />

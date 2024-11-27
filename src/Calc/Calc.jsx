@@ -46,7 +46,7 @@ export default function Calc() {
     <h2>Calculator WIP demo</h2>
     <table className="calculator">
         <thead>
-            <tr><th colSpan="4"><input id="cmdLine" type="text" name="cmdLine" defaultValue="" readOnly={true} value={out} /></th></tr>
+            <tr><th colSpan="4"><input id="cmdLine" type="text" name="cmdLine" defaultValue="" readOnly={true} /></th></tr>
         </thead>
         <tbody>
         {keyboard.map( function(row, i) {
