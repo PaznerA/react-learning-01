@@ -39,7 +39,7 @@ export default function Calc() {
         <thead>
             <tr>
                 <th colSpan="3"><input id="cmdLine" type="text" name="cmdLine" value={out} readOnly={true} /></th>
-                <th><button onClick={showResult}>=</button></th>
+                <th><button className="symbol" onClick={showResult}>=</button></th>
                 </tr>
         </thead>
         <tbody>
