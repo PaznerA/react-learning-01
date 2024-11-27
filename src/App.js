@@ -3,12 +3,14 @@ import './App.css';
 import DataTypeTest from './DataTypeTest';
 import Calc from './Calc/Calc';
 import CSS from './CSS';
+import UserEvents from './UserEvents';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <UserEvents />
         <DataTypeTest />
         <CSS />
         <Calc />
