@@ -3,6 +3,7 @@ import "./Calc.css"
 import Display from "./Display";
 import Keyboard from "./Keyboard";
 import CLR_BTN from "./ClrBtn";
+import Equals from "./Equals";
 
 export default function Calc() {
 
@@ -39,8 +40,12 @@ export default function Calc() {
     <table className="calculator">
         <thead>
             <tr>
-                <th colSpan="3"><Display out={out} /></th>
-                <th><button className="symbol" onClick={showResult}>=</button></th>
+                <th colSpan="3">
+                    <Display out={out} />
+                </th>
+                <th>
+                    <Equals showResult={showResult}/>
+                </th>
                 </tr>
         </thead>
         <tbody>
