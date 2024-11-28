@@ -5,12 +5,14 @@ import Calc from './Calc/Calc';
 import CSS from './CSS';
 import UserEvents from './UserEvents';
 import StatefulComponent from './StatefulComponent';
+import InputAndForm from './InputAndForm';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <InputAndForm></InputAndForm>
         <StatefulComponent />
         <UserEvents />
         <DataTypeTest />
