@@ -11,8 +11,9 @@ export default function DataTypeTest() {
     const subheading = "Světe!"
 
     return <>
+    <h2>Data type test</h2>
     <div className="box">
-        <h1 className="pokus">{heading}</h1>
+        <h5 className="pokus">{heading}</h5>
         <p>{subheading}</p>
         <hr />
         <b>List - component</b>

@@ -1,0 +1,17 @@
+.calculator{
+    background-color: blue;
+    padding: 20px;
+}
+
+.calculator button{
+    width: 40px;
+    height: 30px;
+}
+
+.calculator button.number{
+    background-color: lightblue;
+}
+
+.calculator button.symbol{
+    background-color: lightgreen;
+}
