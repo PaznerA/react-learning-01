@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import AoC from './Aoc/Main';
 import Demos from './Demos/Demos';
 import Calc from './Calc/Calc';
+import AoCMain from './Aoc/Main';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,11 @@ const router = createBrowserRouter([
       }, 
       {
         path: 'aoc',
-        element: <AoC />
+        element: <AoCMain />
+      },
+      {
+        path: 'aoc/:day',
+        element: <AoCMain />
       },
       {
         path: 'calc',
@@ -28,7 +32,7 @@ const router = createBrowserRouter([
     ]
   }, {
     path: 'AoC plain',
-    element: <AoC />
+    element: <AoCMain />
   },
 ])
 

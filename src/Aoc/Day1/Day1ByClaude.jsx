@@ -1,6 +1,6 @@
 import NUMBER_LIST from "./NumbersDay1"
 
-export default function getDay1Out() {
+export default function getDay1OutByClaude() {
     // Rozdělení vstupního textu na řádky a následně na dvojice čísel
     const pairs = NUMBER_LIST.split('\n').map(line => line.trim().split(/\s+/));
     
