@@ -1,18 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import DataTypeTest from './DataTypeTest';
-import Calc from './Calc/Calc';
-import CSS from './CSS';
-import UserEvents from './UserEvents';
-import StatefulComponent from './StatefulComponent';
-import InputAndForm from './InputAndForm';
+import AoC from './Aoc/Main';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <InputAndForm></InputAndForm>
+        <AoC />
+        {/* <InputAndForm></InputAndForm>
         <StatefulComponent />
         <UserEvents />
         <DataTypeTest />
@@ -28,7 +24,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   );
