@@ -9,8 +9,10 @@ function App() {
       <header className="App-header">
         <Nav />
         <img src={logo} className="App-logo" alt="logo" />
-        <Outlet />
       </header>
+      <article style={{background: "darkgray"}}>
+        <Outlet />
+      </article>
     </div>
   );
 }

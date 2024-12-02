@@ -1,17 +1,16 @@
-import { createBrowserRouter, Outlet, RouterProvider, useParams } from 'react-router-dom';
-import Demos from '../Demos/Demos';
+import { useParams } from 'react-router-dom';
 import AocNav from "./AocNav";
 import D1Main from './Day1/D1Main';
-import Nav from '../Core/Nav';
+import D2Main from './Day2/D2Main';
 
 export default function AoCMain() {
 
     const {day} = useParams()
 
     return <>
-        <Nav />
         <AocNav />
-            {/* todo: draw ouput by day param */}
-            <D1Main />
+        {parseInt(day) === 1 && <D1Main />}
+        {parseInt(day) === 2 && <D2Main />}
+        {day === "2c" && <D2Main />}
     </>
 }
