@@ -1,21 +1,64 @@
 import React, { useState } from 'react';
 
+const getNextChar = (char) => {
+  switch(char){
+    case "X": return "M"; break;
+    case "M": return "A"; break;
+    case "A": return "S"; break;
+    case "S": return "X"; break;
+  }
+}
+
 const processString = (text) => {
-  const allowedChars = ['X','M','A','S']
-  const pattern = /[^XMASxmas]/g;
-    let sum = 0
-    const chars = Array.from(text.replace(pattern,''))
-    let uncompletedList = {
-      X: 0,
-      M: 0,
-      A: 0,
-      S: 0
-    }
+  const pattern = /[^XMAS]/g;
+  let sum = 0
+  const chars = Array.from(text.replace(pattern,''))
+  let completedList = {
+    X: 0,
+    M: 0,
+    A: 0,
+    S: 0
+  }
+  let nextChar = "X"
+  let counter = 0
+  let wordsFound = 0
+  do {
+    wordsFound = 0
     for(const char of chars){
-      console.log(char)
-      uncompletedList[char]++
+
+      if(char === nextChar){
+        nextChar = getNextChar(char)
+        completedList[char]++
+      }
+
+      if(completedList.X === completedList.M === completedList.A === completedList.S){
+        wordsFound++
+      }
+
     }
-    console.log(uncompletedList)
+  } while (wordsFound > 0)
+  console.log(completedList)
+
+
+  const charsRev = chars.reverse()
+
+  do {
+    wordsFound = 0
+    for(const char of charsRev){
+
+      if(char === nextChar){
+        nextChar = getNextChar(char)
+        completedList[char]++
+      }
+
+      if(completedList.X === completedList.M === completedList.A === completedList.S){
+        wordsFound++
+      }
+
+    }
+  } while (wordsFound > 0)
+  console.log(completedList)
+
 };
 
 
